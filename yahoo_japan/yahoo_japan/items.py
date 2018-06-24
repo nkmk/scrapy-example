@@ -17,3 +17,9 @@ class YahooJapanDetailItem(scrapy.Item):
     headline = scrapy.Field()
     url = scrapy.Field()
     title = scrapy.Field()
+
+
+class YahooJapanNewsItem(scrapy.Item):
+    url = scrapy.Field()
+    headline = scrapy.Field()
+    category = scrapy.Field()

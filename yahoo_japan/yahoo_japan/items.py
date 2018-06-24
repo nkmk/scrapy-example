@@ -11,3 +11,9 @@ import scrapy
 class YahooJapanItem(scrapy.Item):
     headline = scrapy.Field()
     url = scrapy.Field()
+
+
+class YahooJapanDetailItem(scrapy.Item):
+    headline = scrapy.Field()
+    url = scrapy.Field()
+    title = scrapy.Field()

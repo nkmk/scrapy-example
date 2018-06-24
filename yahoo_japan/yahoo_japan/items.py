@@ -9,6 +9,5 @@ import scrapy
 
 
 class YahooJapanItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    headline = scrapy.Field()
+    url = scrapy.Field()

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from yahoo_japan.items import YahooJapanItem
 
 
 class TopicsSpider(scrapy.Spider):
@@ -8,4 +9,8 @@ class TopicsSpider(scrapy.Spider):
     start_urls = ['http://yahoo.co.jp/']
 
     def parse(self, response):
-        pass
+        for topic in response.css('div#topicsfb ul.emphasis li'):
+            item = YahooJapanItem()
+            item['headline'] = topic.css('a::text').extract_first()
+            item['url'] = topic.css('a::attr(href)').extract_first()
+            yield item

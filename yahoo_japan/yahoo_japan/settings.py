@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'yahoo_japan.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'yahoo_japan (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
